@@ -1,0 +1,25 @@
+﻿@model BilisimOfisiTicariOtomasyon.Models.Sınıflar.Kategori
+@{
+    ViewBag.Title = "KategoriGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Kategori Güncelleme</h2>
+<br />
+@using (Html.BeginForm("KategoriGuncelle", "Kategori", FormMethod.Post))
+           
+{
+        
+    <div class="form-group">
+        @Html.LabelFor(x=>x.kategoriAd)
+        @Html.TextBoxFor(x=>x.kategoriAd, new {@class="form-control"})
+        @Html.HiddenFor(x => x.kategoriId)
+    </div>
+    <br />
+    <button class="btn btn-outline-primary">Güncelle</button>
+           
+}
+
+
+

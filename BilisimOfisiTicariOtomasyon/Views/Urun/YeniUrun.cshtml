@@ -1,0 +1,36 @@
+﻿@model BilisimOfisiTicariOtomasyon.Models.Sınıflar.Urunler
+@{
+    ViewBag.Title = "YeniUrun";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Yeni Urun</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Ürün Adı")
+    @Html.TextBoxFor(x => x.urunAd, new { @class = "form-control" })
+    <br />
+    @Html.Label("Marka")
+    @Html.TextBoxFor(x => x.urunMarka, new { @class = "form-control" })
+    <br />
+    @Html.Label("Stok")
+    @Html.TextBoxFor(x => x.urunStok, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alış Fiyat")
+    @Html.TextBoxFor(x => x.urunAlisFiyat, new { @class = "form-control" })
+    <br />
+    @Html.Label("Satış Fiyat")
+    @Html.TextBoxFor(x => x.urunSatisiyat, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kategori")
+    @Html.DropDownListFor(x => x.kategoriId, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+    @*@Html.TextBoxFor(x => x.Kategoriid, new { @class = "form-control" })*@
+    <br />
+    @Html.Label("Görsel")
+    @Html.TextBoxFor(x => x.urunGorsel, new { @class = "form-control" })
+    <br />
+    @Html.Label("Durum")
+    @Html.TextBoxFor(x => x.urunDurum, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>

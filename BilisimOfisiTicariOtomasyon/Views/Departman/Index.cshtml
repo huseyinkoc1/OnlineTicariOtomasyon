@@ -1,0 +1,32 @@
+﻿@using BilisimOfisiTicariOtomasyon.Models.Sınıflar
+@model List<Departman>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<table class="table table-bordered" style="margin-top:20px">
+
+    <tr>
+        <th>ID</th>
+        <th>Departman Adı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detay</th>
+    </tr>
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>
+                @k.departmanId
+            </td>
+            <td>
+                @k.departmanAd
+            </td>
+            <td><a href="/Departman/DepartmanSil/@k.departmanId" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Departman/DepartmanGetir/@k.departmanId" class="btn btn-outline-primary">Güncelle</a></td>
+            <td><a href="/Departman/DepartmanDetay/@k.departmanId" class="btn btn-outline-info">Detay</a></td>
+        </tr>
+    }
+</table>
+<a href="/Departman/DepartmanEkle" class="btn btn-primary">Yeni Departman</a>

@@ -1,0 +1,24 @@
+﻿@model BilisimOfisiTicariOtomasyon.Models.Sınıflar.FaturaKalem
+@{
+    ViewBag.Title = "YeniKalem";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni Kalem @ViewBag.id</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.faturaKalemAciklama, new { @class = "form-control" })
+    <br />
+    @Html.Label("Miktar")
+    @Html.TextBoxFor(x => x.faturaKalemMiktar, new { @class = "form-control" })
+    <br />
+    @Html.Label("Birim Fiyat")
+    @Html.TextBoxFor(x => x.faturaKalemBirimFiyat, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tutar")
+    @Html.TextBoxFor(x => x.faturaKalemTutar, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>

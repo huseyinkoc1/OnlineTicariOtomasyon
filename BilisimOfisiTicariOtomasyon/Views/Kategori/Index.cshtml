@@ -1,0 +1,26 @@
+﻿@using BilisimOfisiTicariOtomasyon.Models.Sınıflar
+@model List<Kategori>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<table class="table table-bordered" style="margin-top:20px">
+    
+    <tr>
+        <th>Kategori Adı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var k in Model)
+    {
+    <tr>
+        <td>
+            @k.kategoriAd
+        </td>
+        <td><a href="/Kategori/KategoriSil/@k.kategoriId" class="btn btn-outline-danger">Sil</a></td>
+        <td><a href="/Kategori/KategoriGetir/@k.kategoriId" class="btn btn-outline-primary">Güncelle</a></td>
+    </tr>
+    }
+</table>
+<a href="/Kategori/KategoriEkle" class="btn btn-primary">Yeni Kategori</a>

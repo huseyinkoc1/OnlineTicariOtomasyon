@@ -1,0 +1,31 @@
+﻿@model BilisimOfisiTicariOtomasyon.Models.Sınıflar.Personel
+@{
+    ViewBag.Title = "PersonelGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+
+<h2>Cari Güncelleme Sayfası</h2>
+<br />
+
+@using (Html.BeginForm("PersonelGuncelle", "Personel", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.HiddenFor(x => x.personelId)
+    @Html.LabelFor(x => x.personelAd)
+    @Html.TextBoxFor(x => x.personelAd, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.personelSoyad)
+    @Html.TextBoxFor(x => x.personelSoyad, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.personelGorsel)
+    @Html.TextBoxFor(x => x.personelGorsel, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Departman)
+    @Html.DropDownListFor(x => x.departmanId, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info"><i class="fa fa-undo"></i> Güncelle</button>
+</div>
+}
+

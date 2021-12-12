@@ -1,0 +1,39 @@
+﻿@model BilisimOfisiTicariOtomasyon.Models.Sınıflar.Faturalar
+@{
+    ViewBag.Title = "FaturaEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<br />
+<h2>Yeni Fatura</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Fatura Seri No")
+    @Html.TextBoxFor(x => x.faturaSeriNo, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.faturaSeriNo, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Sıra No")
+    @Html.TextBoxFor(x => x.faturaSıraNo, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.faturaTarih, new { @class = "form-control" })
+    <br />
+    @Html.Label("Saat")
+    @Html.TextBoxFor(x => x.faturaSaat, new { @class = "form-control" })
+    <br />
+    @Html.Label("Vergi Dairesi")
+    @Html.TextBoxFor(x => x.faturaVergiDairesi, new { @class = "form-control" })
+    <br />
+    @Html.Label("Teslim Alan")
+    @Html.TextBoxFor(x => x.faturaTeslimAlan, new { @class = "form-control" })
+    <br />
+    @Html.Label("Teslim Eden")
+    @Html.TextBoxFor(x => x.faturaTeslimEden, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary" id="Btn1">Kaydet</button>
+    <script>
+        $('#Btn1').click(function () {
+            alert("Fatura başarılı bir şekilde eklendi");
+        });
+    </script>
+</form>

@@ -1,0 +1,40 @@
+﻿@using BilisimOfisiTicariOtomasyon.Models.Sınıflar
+@model List<Personel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<table id="tbl1" class="table table-bordered" style="margin-top:20px">
+
+    <tr>
+        <th>ID</th>
+        <th>Personel AdI</th>
+        <th>Soyad</th>
+        <th>Departman</th>
+        <th>Güncelle</th>
+        <th>Satışlar</th>
+    </tr>
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>@k.personelId</td>
+            <td>@k.personelAd</td>
+            <td>@k.personelSoyad</td>
+            <td>@k.Departman.departmanAd</td>
+            <td><a href="/Personel/PersonelGetir/@k.personelId" class="btn btn-outline-primary">Güncelle</a></td>
+            <td><a href="/Departman/DepartmanPersonelSatis/@k.personelId" class="btn btn-outline-info">Detay</a></td>
+        </tr>
+    }
+</table>
+<a href="/Personel/PersonelEkle" class="btn btn-primary">Personel Ekle</a>
+<a href="/Personel/PersonelListe" class="btn btn-primary"><i class="fa fa-print"></i>Liste</a>
+
+<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+
+<script>
+    $('#tbl1').dataTable({});
+</script>

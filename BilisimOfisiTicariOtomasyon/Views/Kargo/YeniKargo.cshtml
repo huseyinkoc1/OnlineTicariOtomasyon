@@ -1,0 +1,24 @@
+﻿@model BilisimOfisiTicariOtomasyon.Models.Sınıflar.KargoDetay
+@{
+    ViewBag.Title = "YeniKargo";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni Kargo</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Takip Kodu")
+    <input type="text" value="@ViewBag.takip" class="form-control" readonly name="kargoTakipKodu"/>
+    <br />
+    @Html.Label("Personel")
+    @Html.TextBoxFor(x => x.kargoPersonel, new { @class = "form-control" })
+    @Html.Label("Alıcı")
+    @Html.TextBoxFor(x => x.kargoMusteri, new { @class = "form-control" })
+    @Html.Label("Açıklama")
+    @Html.TextAreaFor(x => x.kargoAciklama, new { @class = "form-control" })
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.kargoTarih, new { @class = "form-control", @type = "date", @required = "required" })
+    <br />
+    <button class="btn btn-outline-info">Kayıt</button>
+</form>

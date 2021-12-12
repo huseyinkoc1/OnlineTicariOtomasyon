@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BilisimOfisiTicariOtomasyon.Models.Sınıflar.Admin">
+    <Position X="1.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAEAAAAAAEAAAABAAAA=</HashCode>
+      <FileName>Models\Sınıflar\Admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BilisimOfisiTicariOtomasyon.Models.Sınıflar.Cari">
+    <Position X="4" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAyBABACA=</HashCode>
+      <FileName>Models\Sınıflar\Cari.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="SatisHarekets" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BilisimOfisiTicariOtomasyon.Models.Sınıflar.FaturaKalem">
+    <Position X="8.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAABgAICAAAAQI=</HashCode>
+      <FileName>Models\Sınıflar\FaturaKalem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BilisimOfisiTicariOtomasyon.Models.Sınıflar.Faturalar">
+    <Position X="8.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAKFAAAAAAAAAAAIACBAAAAAAAAAAAAAAAJAAAAAI=</HashCode>
+      <FileName>Models\Sınıflar\Faturalar.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="FaturaKalems" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BilisimOfisiTicariOtomasyon.Models.Sınıflar.Departman">
+    <Position X="1.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAICAAAAAAAAAAAAAQAAAAAAACAAAAAA=</HashCode>
+      <FileName>Models\Sınıflar\Departman.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Personels" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BilisimOfisiTicariOtomasyon.Models.Sınıflar.Giderler">
+    <Position X="14.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAgAAEAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Models\Sınıflar\Giderler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BilisimOfisiTicariOtomasyon.Models.Sınıflar.KargoDetay">
+    <Position X="11" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAEAAAQAAAAAAABAAACAAAAAAAIAA=</HashCode>
+      <FileName>Models\Sınıflar\KargoDetay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BilisimOfisiTicariOtomasyon.Models.Sınıflar.KargoTakip">
+    <Position X="11" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAADAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Sınıflar\KargoTakip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BilisimOfisiTicariOtomasyon.Models.Sınıflar.Kategori">
+    <Position X="1.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Sınıflar\Kategori.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Urunlers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BilisimOfisiTicariOtomasyon.Models.Sınıflar.Mesajlar">
+    <Position X="14.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAACAAIAgAAAAAAAAAAgAAAAAAIA=</HashCode>
+      <FileName>Models\Sınıflar\Mesajlar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BilisimOfisiTicariOtomasyon.Models.Sınıflar.Personel">
+    <Position X="4" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAQAAIAAQAAAAAACQAAAAAAAAAAAAAAAUAA=</HashCode>
+      <FileName>Models\Sınıflar\Personel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="SatisHarekets" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BilisimOfisiTicariOtomasyon.Models.Sınıflar.SatisHareket">
+    <Position X="6.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAABIAgAIAAAAAAAABAAAAAACQAAQAAAAAAAAAAAQAQ=</HashCode>
+      <FileName>Models\Sınıflar\SatisHareket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BilisimOfisiTicariOtomasyon.Models.Sınıflar.Urunler">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAUAQAACAAAAACAACAAAgAAAAAAAAAAAAAABQ=</HashCode>
+      <FileName>Models\Sınıflar\Urunler.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="SatisHarekets" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BilisimOfisiTicariOtomasyon.Models.Sınıflar.Yapilacak">
+    <Position X="14.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Models\Sınıflar\Yapilacak.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,36 @@
+﻿@model BilisimOfisiTicariOtomasyon.Models.Sınıflar.Faturalar
+@{
+    ViewBag.Title = "FaturaGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Fatura Güncelleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("FaturaGuncelle", "Fatura", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.faturaId)
+    @Html.Label("Seri No")
+    @Html.TextBoxFor(x => x.faturaSeriNo, new { @class = "form-control" })
+    <br />
+    @Html.Label("Sıra No")
+    @Html.TextBoxFor(x => x.faturaSıraNo, new { @class = "form-control" })
+    <br />
+    @Html.Label("Vergi Dairesi")
+    @Html.TextBoxFor(x => x.faturaVergiDairesi, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.faturaTarih, new { @class = "form-control" })
+    <br />
+    @Html.Label("Saat")
+    @Html.TextBoxFor(x => x.faturaSaat, new { @class = "form-control" })
+    <br />
+    @Html.Label("Teslim Eden")
+    @Html.TextBoxFor(x => x.faturaTeslimEden, new { @class = "form-control" })
+    <br />
+    @Html.Label("Teslim Alan")
+    @Html.TextBoxFor(x => x.faturaTeslimAlan, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+}
+

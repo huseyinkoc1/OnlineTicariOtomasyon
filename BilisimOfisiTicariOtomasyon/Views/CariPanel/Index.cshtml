@@ -1,0 +1,34 @@
+﻿@model BilisimOfisiTicariOtomasyon.Models.Sınıflar.Cari
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CariLayout.cshtml";
+}
+
+<br />
+<h2>Müşteri Paneli</h2>
+<br />
+
+@using(Html.BeginForm("Index2","CariPanel",FormMethod.Post))
+            {
+                <table class="table table-bordered">
+                    <tr>
+                        @*<td><label>Mail: @HttpContext.Current.User.Identity.Name</label></td>*@
+                        <td>Bilgilerim</td>
+                    </tr>
+                    <tr class="alert-dark alert-link">
+                        <td class="offset-5">@Html.Label("Ad")</td>
+                        <td class="offset-5">@Html.Label("Soyad")</td>
+                        <td class="offset-5">@Html.Label("Şehir")</td>
+                        <td class="offset-5">@Html.Label("Mail")</td>
+                        <td class="offset-5">@Html.Label("Şifre")</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.TextBoxFor(x=>x.cariAd, new { @class="form-control"})</td>
+                        <td>@Html.TextBoxFor(x=>x.cariSoyad, new { @class = "form-control" })</td>
+                        <td>@Html.TextBoxFor(x=>x.cariSehir, new { @class = "form-control" })</td>
+                        <td>@Html.TextBoxFor(x=>x.cariMail, new { @class = "form-control" })</td>
+                        <td>@Html.TextBoxFor(x=>x.cariSifre, new { @class = "form-control" })</td>
+                    </tr>
+                </table>
+                <button class="btn btn-dark">Bilgilerimi Güncelle</button>
+            }

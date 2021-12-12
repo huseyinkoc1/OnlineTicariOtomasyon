@@ -1,0 +1,30 @@
+﻿@using BilisimOfisiTicariOtomasyon.Models.Sınıflar
+@model List<Personel>
+@{
+    ViewBag.Title = "DepartmanDetay";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Departman Detay</h2>
+<br />
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Departman Adı: @ViewBag.d</li>
+</ol>
+<table class="table table-hover">
+    <tr>
+        <th>Personel ID</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Satış Detay</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.personelId</td>
+            <td>@x.personelAd</td>
+            <td>@x.personelSoyad</td>
+            <td><a href="/Departman/DepartmanPersonelSatis/@x.personelId" class="btn btn-default" style="background-color:burlywood">Satış Detay</a></td>
+        </tr>
+    }
+
+</table>

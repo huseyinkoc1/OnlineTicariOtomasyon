@@ -1,0 +1,25 @@
+﻿@model BilisimOfisiTicariOtomasyon.Models.Sınıflar.Personel
+@{
+    ViewBag.Title = "PersonelEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni Personel</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Personel Adı")
+    @Html.TextBoxFor(x => x.personelAd, new { @class = "form-control" })
+    <br />
+    @Html.Label("Personel Soyad")
+    @Html.TextBoxFor(x => x.personelSoyad, new { @class = "form-control" })
+    <br />
+    @Html.Label("Görsel")
+    @Html.TextBoxFor(x => x.personelGorsel, new { @class = "form-control" })
+    <br />
+    @Html.Label("Departman")
+    @Html.DropDownListFor(x => x.departmanId, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+    @*@Html.TextBoxFor(x => x.Kategoriid, new { @class = "form-control" })*@
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>

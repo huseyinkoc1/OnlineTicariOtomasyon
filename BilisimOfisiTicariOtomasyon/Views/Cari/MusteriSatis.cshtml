@@ -1,0 +1,40 @@
+﻿@using BilisimOfisiTicariOtomasyon.Models.Sınıflar
+@model List<SatisHareket>
+@{
+    ViewBag.Title = "MusteriSatis";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Müşteri Satış Geçmişi</h2>
+<br />
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Müşteri Adı: @ViewBag.cari</li>
+</ol>
+
+<table class="table table-condensed">
+    <tr>
+        <th>Satış ID</th>
+        <th>Ürün</th>
+        <th>Personel</th>
+        <th>Fiyat</th>
+        <th>Adet</th>
+        <th>Toplam</th>
+        <th>Tarih</th>
+        <th>Yazdır</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.satisHareketId</td>
+            <td>@x.Urunler.urunAd</td>
+            <td>@x.Personel.personelAd @x.Personel.personelSoyad</td>
+            <td>@x.satisHareketFiyat</td>
+            <td>@x.satisHareketAdet</td>
+            <td>@x.satisHareketToplamTutar</td>
+            <td>@x.satisHareketTarih</td>
+            <td><a href="#" class="btn btn-success" style="background-color:dodgerblue">Yazdır</a></td>
+        </tr>
+    }
+</table>
+

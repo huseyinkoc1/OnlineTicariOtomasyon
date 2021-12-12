@@ -1,0 +1,33 @@
+﻿@using BilisimOfisiTicariOtomasyon.Models.Sınıflar
+@model List<Cari>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<table class="table table-striped">
+    <tr>
+        <th>Müşteri ID</th>
+        <th>Ad Soyad</th>
+        <th>Şehir</th>
+        <th>Mail</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.cariId</td>
+            <td>@x.cariAd @x.cariSoyad</td>
+            <td>@x.cariSehir</td>
+            <td>@x.cariMail</td>
+            <td><a href="/Cari/CariSil/@x.cariId" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Cari/CariGetir/@x.cariId" class="btn btn-outline-primary">Güncelle</a></td>
+            <td><a href="/Cari/MusteriSatis/@x.cariId" class="btn btn-outline-secondary">Detay</a></td>
+        </tr>
+    }
+</table>
+<a href="/Cari/YeniCari/" class="btn btn-primary">Cari Ekle</a>
+

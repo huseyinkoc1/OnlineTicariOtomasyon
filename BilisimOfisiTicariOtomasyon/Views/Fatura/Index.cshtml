@@ -1,0 +1,47 @@
+﻿@using BilisimOfisiTicariOtomasyon.Models.Sınıflar
+@model List<Faturalar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<br />
+<h2>Faturalar</h2>
+<br />
+<table class="table table-active table-primary" style="margin-top:20px">
+
+    <tr>
+        <th>ID</th>
+        <th>Fatura Seri No</th>
+        <th>Tarih</th>
+        <th>Vergi Dairesi</th>
+        <th>Saat</th>
+        <th>Teslim Alan</th>
+        <th>Teslim Eden</th>
+        <th>Toplam</th>
+        <th>Güncelle</th>
+        <th>Detay</th>
+    </tr>
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>@k.faturaId</td>
+            <td>@k.faturaSeriNo@k.faturaSıraNo</td>
+            <td>@Convert.ToDateTime(@k.faturaTarih).ToString("d")</td>
+            <td>@k.faturaVergiDairesi</td>
+            <td>@k.faturaSaat</td>
+
+            <td>@k.faturaTeslimAlan</td>
+            <td>@k.faturaTeslimEden</td>
+
+            <td>@k.faturaToplam₺</td>
+
+
+            <td><a href="/Fatura/FaturaGetir/@k.faturaId" class="btn btn-outline-primary">Güncelle</a></td>
+            <td><a href="/Fatura/FaturaDetay/@k.faturaId" class="btn btn-outline-info">Detay</a></td>
+
+        </tr>
+    }
+</table>
+<a href="/Fatura/FaturaEkle" class="btn btn-primary">Yeni Fatura</a>

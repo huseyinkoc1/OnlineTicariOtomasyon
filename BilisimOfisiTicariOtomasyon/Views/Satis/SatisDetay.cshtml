@@ -1,0 +1,37 @@
+﻿@using BilisimOfisiTicariOtomasyon.Models.Sınıflar
+@model List<SatisHareket>
+@{
+    ViewBag.Title = "SatisDetay";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Satış Detayı</h2>
+<br />
+<table class="table table-condensed">
+    <tr>
+        <th>Satış ID</th>
+        <th>Ürün</th>
+        <th>Cari</th>
+        <th>Personel</th>
+        <th>Fiyat</th>
+        <th>Adet</th>
+        <th>Toplam</th>
+        <th>Tarih</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.satisHareketId</td>
+            <td>@x.Urunler.urunAd</td>
+            <td>@x.Cari.cariAd  @x.Cari.cariSoyad</td>
+            <td>@x.Personel.personelAd  @x.Personel.personelSoyad</td>
+            <td>@x.satisHareketFiyat</td>
+            <td>@x.satisHareketAdet</td>
+            <td>@x.satisHareketToplamTutar</td>
+            <td>@x.satisHareketTarih</td>
+
+        </tr>
+    }
+</table>
+<button class="btn btn-success" style="background-color:dodgerblue">Yazdır</button>

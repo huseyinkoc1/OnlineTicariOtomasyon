@@ -1,0 +1,40 @@
+﻿@using BilisimOfisiTicariOtomasyon.Models.Sınıflar
+@model List<KargoDetay>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<br />
+
+@using (Html.BeginForm("Index", "Kargo", FormMethod.Get))
+{
+    <p>
+        Kargo Takip Numarası: @Html.TextBox("p")
+        <input type="submit" value="Ara" />
+    </p>
+}
+<table class="table table-bordered" style="margin-top:20px">
+
+    <tr>
+        <th>Personel</th>
+        <th>Alıcı</th>
+        <th>Tarih</th>
+        <th>Takip Numarası</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var k in Model)
+    {
+<tr>
+    <td>@k.kargoPersonel</td>
+    <td>@k.kargoMusteri</td>
+    <td>@Convert.ToDateTime(@k.kargoTarih).ToString("d")</td>
+    <td>@k.kargoTakipKodu</td>
+    <td><a href="/Kargo/KargoTakip/@k.kargoTakipKodu" class="btn btn-outline-info">Detay</a></td>
+</tr>
+    }
+</table>
+<a href="/Kargo/YeniKargo" class="btn btn-primary">Yeni Kargo Girişi</a>
+
+
